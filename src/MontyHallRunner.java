@@ -9,11 +9,7 @@ public class MontyHallRunner {
         System.out.println("One of the goats is behind door number "+var1.revealDoor());
         System.out.print("Do you want to switch your guess? Yes or No: ");
         String swappable = scan.nextLine();
-        if (swappable.equals("Yes")){
-            var1.switchDoor(true);
-        }else{
-            var1.switchDoor(false);
-        }
+        var1.switchDoor(swappable.equals("Yes"));
         var1.winLose();
     }
 }
